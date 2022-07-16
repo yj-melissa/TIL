@@ -30,12 +30,26 @@
 
 - 커밋(commit)은 아래 3가지 영역을 바탕으로 동작
 
-| Working Directory | 내가 작업하고 있는 실제 디렉토리 | untracked
-(커밋 후 수정) → modified |
+| Working Directory | 내가 작업하고 있는 실제 디렉토리 | untracked → modified |
 | --- | --- | --- |
-| Staging Area | 커밋(commit)으로 남기고 싶은, 특정 버전으로 관리하고 싶은 파일이 있는 곳
-중간 확인 공간. 워킹 디렉토리에서 저장하고 싶은 파일들만 올림 | (git add) →
-(tracked)staged |
-| Repository | 커밋(commit)들이 저장되는 곳 | (git commit) →
-committed |
+| Staging Area | 커밋(commit)으로 남기고 싶은, 특정 버전으로 관리하고 싶은 파일이 있는 곳 | staged |
+| Repository | 커밋(commit)들이 저장되는 곳 | committed |
 
+
+## git bash 명령어
+
+| git init | git 최초 연동 |
+| --- | --- |
+| git status | 해당 폴더 상태 확인(ex. untracked, staged, committed, modified) |
+| git add |  |
+| git commit -m “commit message” | 커밋 메시지는 자세하게 작성하기 |
+| git config --global user.email "user@email.com" |  |
+| git config --global user.name "username" |  |
+| git commit -m "commiti message” |  |
+| git remote add 레포별명 레포주소 |  |
+| git remote -v | origin 등록 상태 확인 |
+| git push 레포별명 브랜치명 |  |
+| git clone 레포주소 | remote repo를 local로 복사 |
+| git pull origin master | local repo 최신 commit을 remote repo로 push |
+| git log | commit 히스토리 확인 / git log —oneline은 더 간편 |
+| git diff | 두 commit 간 차이 확인 |
